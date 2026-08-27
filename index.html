@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Vivek Ambariya — Software Engineering Intern Candidate, 2028</title>
+<meta name="description" content="B.E. Computer Engineering student at LJIET, Ahmedabad. I build production-shaped web platforms: real-time booking over WebSockets, OCR-based identity verification, payment gateways, and AI-powered code search.">
+<meta property="og:title" content="Vivek Ambariya — builds production-shaped web platforms">
+<meta property="og:description" content="WORKIZO: real-time home-services marketplace. Three portals, role-based JWT, WebSocket booking, Aadhaar/PAN OCR verification, Razorpay. 195 commits.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23EC5B38%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2243%22%20font-family%3D%22Archivo%2CHelvetica%2CArial%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23FCF2E5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%22-1%22%3EVA%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="_ds/modernist-1bbcbacb-ccb7-4b0e-bede-055ff71bad68/styles.css">
+<script src="_ds/modernist-1bbcbacb-ccb7-4b0e-bede-055ff71bad68/_ds_bundle.js"></script>
+<style>
+:root{--edge:clamp(20px,5vw,72px);--lead:28px;--measure:62ch;
+--rule:var(--color-divider);--k:var(--color-accent-700);
+--muted:#5f5252;--ink2:#403636;--tint:color-mix(in srgb,var(--color-accent) 8%,transparent)}
+:root[data-theme="dark"]{--color-bg:#1a1615;--color-surface:#251b1b;--color-text:#fcf2e5;
+--color-accent:#ec5b38;--color-divider:color-mix(in srgb,#fcf2e5 30%,transparent);
+--acc-ink:#fe9176;--k:#fe9176;--muted:#a8a492;--ink2:#d8cfc3;
+--tint:color-mix(in srgb,#ec5b38 13%,transparent)}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;text-wrap:pretty;background:var(--color-bg);color:var(--color-text);-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</helmet>
+
+<a href="#hero" style="position:absolute;left:-9999px;top:0;padding:10px 14px;background:var(--color-accent);color:var(--color-on-accent);font:600 13px/1 var(--font-body);z-index:99" style-focus="left:8px;top:8px">Skip to content</a>
+
+<div id="prog" style="position:fixed;top:0;left:0;height:3px;width:0%;background:var(--color-accent);z-index:60"></div>
+
+<header id="head" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent;border-bottom:2px solid transparent;transition:background .25s ease,border-color .25s ease">
+  <nav aria-label="Sections" style="margin:0 auto;padding:16px var(--edge);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
+    <a data-navbrand="" data-navpill="" href="#intro" aria-label="Vivek Ambariya — top of page" style="flex:none;display:flex;align-items:center;justify-content:center;width:52px;height:52px;border:1px solid rgba(252,242,229,.4);border-radius:50%;font:700 13px/1 var(--font-heading);letter-spacing:.1em;color:#fcf2e5;text-decoration:none" style-hover="border-color:var(--color-accent)">VA</a>
+    <div data-navpill="" style="display:flex;align-items:center;gap:2px;flex-wrap:wrap;border:1px solid rgba(252,242,229,.4);border-radius:999px;padding:5px 8px">
+      <a data-navlink="" href="#workizo" style="font:500 13.5px/1 var(--font-body);color:rgba(252,242,229,.86);text-decoration:none;white-space:nowrap;padding:11px 15px;border-radius:999px" style-hover="color:var(--color-accent)">Workizo</a>
+      <a data-navlink="" href="#work" style="font:500 13.5px/1 var(--font-body);color:rgba(252,242,229,.86);text-decoration:none;white-space:nowrap;padding:11px 15px;border-radius:999px" style-hover="color:var(--color-accent)">Selected work</a>
+      <a data-navlink="" href="#skills" style="font:500 13.5px/1 var(--font-body);color:rgba(252,242,229,.86);text-decoration:none;white-space:nowrap;padding:11px 15px;border-radius:999px" style-hover="color:var(--color-accent)">Skills</a>
+      <a data-navlink="" href="#background" style="font:500 13.5px/1 var(--font-body);color:rgba(252,242,229,.86);text-decoration:none;white-space:nowrap;padding:11px 15px;border-radius:999px" style-hover="color:var(--color-accent)">Background</a>
+    </div>
+    <div style="flex:none;display:flex;align-items:center;gap:10px">
+      
+      <a data-navlink="" data-navpill="" href="#contact" style="font:500 13.5px/1 var(--font-body);color:rgba(252,242,229,.9);text-decoration:none;white-space:nowrap;border:1px solid rgba(252,242,229,.4);border-radius:999px;padding:13px 20px" style-hover="border-color:var(--color-accent);color:var(--color-accent)">contact</a>
+    </div>
+  </nav>
+</header>
+
+<div id="introPin" style="position:relative;height:300vh;background:#140f0e">
+<section id="intro" style="position:sticky;top:0;height:100vh;overflow:hidden;background-color:#140f0e;color:#fcf2e5">
+  <div aria-hidden="true" style="position:absolute;inset:0;background-image:url('uploads/landing%201.png');background-size:cover;background-position:center top;background-repeat:no-repeat;filter:grayscale(1) contrast(1.06)"></div>
+  <video id="introVid" aria-hidden="true" muted="" autoplay="" loop="" playsinline="" preload="auto" poster="uploads/landing%201.png" style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1) contrast(1.06);pointer-events:none">
+    <source src="uploads/only_the_first_sec_do_not.mp4" type="video/mp4">
+  </video>
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,14,.74) 0%,rgba(20,15,14,.06) 20%,rgba(20,15,14,.10) 40%,rgba(20,15,14,.62) 62%,rgba(20,15,14,.94) 80%,#140f0e 100%)"></div>
+  <div style="position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:calc(3*var(--lead)) var(--edge) calc(0.75*var(--lead))">
+    
+    <h1 style="font: 700 clamp(13px,1.25vw,17px)/1 var(--font-heading); letter-spacing: .26em; text-transform: uppercase; color: #fcf2e5; margin: 0; font-weight: 800">Vivek Ambariya</h1><p style="font: 600 clamp(14px,1.5vw,20px)/1.4 var(--font-heading); letter-spacing: .005em; color: rgba(252,242,229,.92); margin: 16px 0 0; max-width: 46ch; margin-top: 14px">Full-stack developer&nbsp; —&nbsp; Data Analyst</p><p style="font: 800 clamp(92px,22vw,300px)/0.82 var(--font-heading); letter-spacing: -0.05em; color: #fcf2e5; margin: clamp(8px,1.4vh,22px) 0 0; width: 976px; height: 130px; font-size: 120px"><span id="introWord" style="display:inline-block;transition:opacity .16s ease-out">systems</span><span style="color:var(--color-accent)">.</span></p>
+    
+  </div>
+  <div aria-hidden="true" style="position:absolute;right:var(--edge);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;font:600 11px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:rgba(252,242,229,.6)"><span style="writing-mode:vertical-rl">Scroll</span><span style="display:block;width:2px;height:46px;background:rgba(252,242,229,.4)"></span></div>
+</section>
+</div>
+
+<section id="hero" aria-labelledby="h-name" style="position:relative;min-height:100vh;display:flex;align-items:center;color:#fcf2e5;background-color:#1a1615;background-image:linear-gradient(90deg,rgba(26,22,21,.96) 0%,rgba(26,22,21,.9) 32%,rgba(26,22,21,.5) 58%,rgba(26,22,21,.14) 100%),url('uploads/Gemini_Generated_Image_u8fnuou8fnuou8fn.png');background-size:cover,cover;background-position:center,right center;background-repeat:no-repeat,no-repeat">
+  <div style="max-width:1200px;margin:0 auto;padding:calc(4.5*var(--lead)) var(--edge) calc(4*var(--lead));width:100%">
+    <div style="max-width:640px;padding-right:clamp(18px,3.5vw,52px);border-right:2px solid rgba(252,242,229,.22)">
+      <p style="font:600 13px/14px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:#fe9176;margin:0 0 calc(1.5*var(--lead))">B.E. Computer Engineering · LJIET, Ahmedabad · Class of 2028</p>
+      <h2 id="h-name" style="font:800 clamp(46px,7.4vw,100px)/0.94 var(--font-heading);letter-spacing:-0.035em;color:#fcf2e5;margin:0 0 0 -0.055em;text-box:trim-both cap alphabetic">Vivek<br>Ambariya</h2>
+      <p style="font:500 clamp(17px,1.8vw,22px)/1.5 var(--font-body);color:rgba(252,242,229,.9);max-width:36ch;margin:calc(1.2*var(--lead)) 0 0;letter-spacing:-0.01em">I build production-shaped web platforms — real-time booking over WebSockets, OCR-based identity verification, payment gateways, and AI-powered code search.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:calc(1.5*var(--lead))">
+        <a class="btn btn-primary" href="https://github.com/vivek-ambariya" target="_blank" rel="noopener" style="text-decoration:none;padding:12px 18px;font-size:14px">Open my GitHub →</a>
+        <a class="btn btn-secondary" href="mailto:vivekambaria@gmail.com" style="text-decoration:none;padding:12px 18px;font-size:14px;color:#fcf2e5;border-color:rgba(252,242,229,.55)">vivekambaria@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div aria-hidden="true" style="position:absolute;left:var(--edge);bottom:26px;display:flex;align-items:center;gap:11px;font:600 11.5px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:rgba(252,242,229,.55)"><span style="display:block;width:36px;height:2px;background:rgba(252,242,229,.42)"></span>Scroll</div>
+</section>
+
+<main style="max-width:1200px;margin:0 auto;padding:0 var(--edge)">
+
+  <hr style="height:2px;border:0;margin:0;background:var(--rule)">
+
+  <section aria-label="By the numbers" style="padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead));display:flex;flex-wrap:wrap;gap:var(--lead) clamp(32px,7vw,110px)">
+    <div data-reveal="" data-stagger="0" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1)">
+      <p style="font:800 clamp(38px,4.4vw,56px)/1 var(--font-heading);color:var(--color-accent);margin:0 0 0 -0.04em;letter-spacing:-0.03em">~400</p>
+      <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 0;max-width:22ch">Commits across nine repositories</p>
+    </div>
+    <div data-reveal="" data-stagger="1" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1)">
+      <p style="font:800 clamp(38px,4.4vw,56px)/1 var(--font-heading);color:var(--color-accent);margin:0 0 0 -0.04em;letter-spacing:-0.03em">9</p>
+      <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 0;max-width:22ch">Projects built, five shipped end to end</p>
+    </div>
+    <div data-reveal="" data-stagger="2" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1)">
+      <p style="font:800 clamp(38px,4.4vw,56px)/1 var(--font-heading);color:var(--color-accent);margin:0 0 0 -0.04em;letter-spacing:-0.03em">TOP</p>
+      <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 0;max-width:22ch">Project, Startup Week 2026 — from 500+</p>
+    </div>
+  </section>
+</main>
+
+<section aria-label="The claim" style="color: var(--color-on-accent); min-height: min(88vh,760px); display: flex; align-items: center; margin-top: calc(1*var(--lead)); background-color: var(--color-neutral-400)">
+  <div style="max-width:1200px;margin:0 auto;padding:calc(3*var(--lead)) var(--edge);width:100%">
+    <p data-reveal="" data-stagger="0" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);font:800 clamp(30px,4.6vw,62px)/1.06 var(--font-heading);letter-spacing:-0.028em;margin:0 0 0 -0.05em;max-width:26ch">I don't build demos.</p>
+    <p data-reveal="" data-stagger="1" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);font:600 clamp(21px,2.6vw,34px)/1.35 var(--font-heading);letter-spacing:-0.018em;margin:calc(1.5*var(--lead)) 0 0;max-width:30ch">I build systems with authentication, payments, real-time state, and the edge cases that only appear once something actually runs.</p>
+  </div>
+</section>
+
+<main id="workizo" style="max-width:1200px;margin:0 auto;padding:0 var(--edge)">
+
+  <section aria-labelledby="h-wk" style="padding:calc(3.5*var(--lead)) 0 calc(1.5*var(--lead))">
+    <p style="font:600 13px/14px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--k);margin:0 0 calc(1*var(--lead))">Flagship — chapter 01</p>
+    <h2 id="h-wk" style="font:800 clamp(44px,8.6vw,116px)/0.95 var(--font-heading);letter-spacing:-0.04em;margin:0 0 0 -0.055em">WORKIZO</h2>
+    <p style="font:500 clamp(18px,2vw,24px)/1.45 var(--font-body);letter-spacing:-0.01em;max-width:40ch;margin:calc(1.2*var(--lead)) 0 0">Real-time home-services marketplace connecting customers with verified professionals — electricians, plumbers, carpenters, AC technicians.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:calc(1.2*var(--lead));font:600 12.5px/16px var(--font-body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)">
+      <span style="color:var(--color-text)">195 commits</span><span>·</span><span style="color:var(--color-text)">Lead developer &amp; team lead</span><span>·</span><span>React</span><span>·</span><span>Django REST Framework</span><span>·</span><span>Django Channels</span><span>·</span><span>MySQL</span>
+    </div>
+  </section>
+
+  <div id="wkPin" style="position:relative;height:360vh">
+    <div id="wkStick" style="position:sticky;top:88px;padding:calc(1*var(--lead)) 0 calc(1.5*var(--lead))">
+      <div style="border-top:2px solid var(--rule);display:flex;flex-wrap:wrap;gap:calc(1.5*var(--lead)) clamp(28px,5vw,72px);padding-top:calc(1*var(--lead))">
+
+        <div style="flex:1 1 240px;max-width:330px">
+          <p style="font:600 12.5px/14px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 18px">One booking, end to end</p>
+          <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0">
+            <li data-wk-step="0" style="display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--rule)"><span style="font:700 12px/18px var(--font-heading);color:var(--muted);font-feature-settings:'tnum' 1;flex:none;width:22px">01</span><span style="font:600 15.5px/18px var(--font-body);letter-spacing:-0.005em">Request</span></li>
+            <li data-wk-step="1" style="display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--rule)"><span style="font:700 12px/18px var(--font-heading);color:var(--muted);font-feature-settings:'tnum' 1;flex:none;width:22px">02</span><span style="font:600 15.5px/18px var(--font-body);letter-spacing:-0.005em">Match</span></li>
+            <li data-wk-step="2" style="display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--rule)"><span style="font:700 12px/18px var(--font-heading);color:var(--muted);font-feature-settings:'tnum' 1;flex:none;width:22px">03</span><span style="font:600 15.5px/18px var(--font-body);letter-spacing:-0.005em">En route</span></li>
+            <li data-wk-step="3" style="display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--rule)"><span style="font:700 12px/18px var(--font-heading);color:var(--muted);font-feature-settings:'tnum' 1;flex:none;width:22px">04</span><span style="font:600 15.5px/18px var(--font-body);letter-spacing:-0.005em">On site</span></li>
+            <li data-wk-step="4" style="display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)"><span style="font:700 12px/18px var(--font-heading);color:var(--muted);font-feature-settings:'tnum' 1;flex:none;width:22px">05</span><span style="font:600 15.5px/18px var(--font-body);letter-spacing:-0.005em">Invoice</span></li>
+          </ol>
+          <p id="wkCaption" style="font:400 15px/24px var(--font-body);color:var(--ink2);margin:22px 0 0;max-width:34ch;min-height:120px">A customer picks a service and a booking record opens. It is broadcast to the eligible captain pool over Django Channels — nothing polls for it.</p>
+        </div>
+
+        <div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:calc(1*var(--lead))">
+
+          <div>
+            <div style="position:relative;height:3px;background:var(--rule);margin:0 0 14px"><div id="wkFill" style="position:absolute;inset:0 auto 0 0;width:8%;background:var(--color-accent)"></div></div>
+            <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px">
+              <div data-wk-node="0" style="min-width:0"><div data-marker="" style="width:11px;height:11px;background:var(--rule);margin:0 0 9px"></div><p style="font:700 11.5px/15px var(--font-heading);letter-spacing:.06em;text-transform:uppercase;margin:0;color:var(--muted)">Request</p><p style="font:400 11.5px/16px var(--font-body);color:var(--muted);margin:5px 0 0">Booking opens</p></div>
+              <div data-wk-node="1" style="min-width:0"><div data-marker="" style="width:11px;height:11px;background:var(--rule);margin:0 0 9px"></div><p style="font:700 11.5px/15px var(--font-heading);letter-spacing:.06em;text-transform:uppercase;margin:0;color:var(--muted)">Match</p><p style="font:400 11.5px/16px var(--font-body);color:var(--muted);margin:5px 0 0">First accept wins</p></div>
+              <div data-wk-node="2" style="min-width:0"><div data-marker="" style="width:11px;height:11px;background:var(--rule);margin:0 0 9px"></div><p style="font:700 11.5px/15px var(--font-heading);letter-spacing:.06em;text-transform:uppercase;margin:0;color:var(--muted)">En route</p><p style="font:400 11.5px/16px var(--font-body);color:var(--muted);margin:5px 0 0">Live status</p></div>
+              <div data-wk-node="3" style="min-width:0"><div data-marker="" style="width:11px;height:11px;background:var(--rule);margin:0 0 9px"></div><p style="font:700 11.5px/15px var(--font-heading);letter-spacing:.06em;text-transform:uppercase;margin:0;color:var(--muted)">On site</p><p style="font:400 11.5px/16px var(--font-body);color:var(--muted);margin:5px 0 0">QR arrival</p></div>
+              <div data-wk-node="4" style="min-width:0"><div data-marker="" style="width:11px;height:11px;background:var(--rule);margin:0 0 9px"></div><p style="font:700 11.5px/15px var(--font-heading);letter-spacing:.06em;text-transform:uppercase;margin:0;color:var(--muted)">Invoice</p><p style="font:400 11.5px/16px var(--font-body);color:var(--muted);margin:5px 0 0">Paid &amp; emailed</p></div>
+            </div>
+          </div>
+
+          <div>
+            <p style="font:600 11.5px/14px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px">Three portals, role-based JWT</p>
+            <div data-lane="customer" style="display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;border-top:1px solid var(--rule);padding:12px 0;transition:opacity .3s ease-out">
+              <p style="flex:0 0 88px;font:800 12.5px/18px var(--font-heading);letter-spacing:.05em;margin:0">CUSTOMER</p>
+              <p data-lane-status="" style="flex:1 1 200px;font:400 14px/20px var(--font-body);color:var(--ink2);margin:0">Selects a service, opens the booking</p>
+            </div>
+            <div data-lane="captain" style="display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;border-top:1px solid var(--rule);padding:12px 0;transition:opacity .3s ease-out">
+              <p style="flex:0 0 88px;font:800 12.5px/18px var(--font-heading);letter-spacing:.05em;margin:0">CAPTAIN</p>
+              <p data-lane-status="" style="flex:1 1 200px;font:400 14px/20px var(--font-body);color:var(--ink2);margin:0">Waiting in the verified pool</p>
+            </div>
+            <div data-lane="admin" style="display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px 0;transition:opacity .3s ease-out">
+              <p style="flex:0 0 88px;font:800 12.5px/18px var(--font-heading);letter-spacing:.05em;margin:0">ADMIN</p>
+              <p data-lane-status="" style="flex:1 1 200px;font:400 14px/20px var(--font-body);color:var(--ink2);margin:0">Sees the request land in the queue</p>
+            </div>
+          </div>
+
+          <div>
+            <p style="font:600 11.5px/14px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px">What runs underneath</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:10px">
+              <div data-wk="jwt" style="border:1px solid var(--rule);padding:12px;opacity:.34;transition:opacity .3s ease-out,border-color .3s ease-out,background .3s ease-out">
+                <p style="font:800 11.5px/15px var(--font-heading);letter-spacing:.06em;margin:0">JWT ROLE GATE</p>
+                <p style="font:400 12.5px/18px var(--font-body);color:var(--ink2);margin:7px 0 0">One token model, three permission sets</p>
+              </div>
+              <div data-wk="ws" style="border:1px solid var(--rule);padding:12px;opacity:.34;transition:opacity .3s ease-out,border-color .3s ease-out,background .3s ease-out">
+                <p style="font:800 11.5px/15px var(--font-heading);letter-spacing:.06em;margin:0">DJANGO CHANNELS</p>
+                <p style="font:400 12.5px/18px var(--font-body);color:var(--ink2);margin:7px 0 0">State pushed to every portal, not polled</p>
+              </div>
+              <div data-wk="ocr" style="border:1px solid var(--rule);padding:12px;opacity:.34;transition:opacity .3s ease-out,border-color .3s ease-out,background .3s ease-out">
+                <p style="font:800 11.5px/15px var(--font-heading);letter-spacing:.06em;margin:0">OPENCV + EASYOCR</p>
+                <p style="font:400 12.5px/18px var(--font-body);color:var(--ink2);margin:7px 0 0">Aadhaar / PAN read, regex-extracted, matched</p>
+              </div>
+              <div data-wk="pay" style="border:1px solid var(--rule);padding:12px;opacity:.34;transition:opacity .3s ease-out,border-color .3s ease-out,background .3s ease-out">
+                <p style="font:800 11.5px/15px var(--font-heading);letter-spacing:.06em;margin:0">RAZORPAY + INVOICE</p>
+                <p style="font:400 12.5px/18px var(--font-body);color:var(--ink2);margin:7px 0 0">Signature verified server-side, parts itemized</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section aria-label="Workizo detail" style="padding:calc(1.5*var(--lead)) 0 calc(2.5*var(--lead))">
+    <div style="border-top:2px solid var(--rule)"></div>
+    <div data-reveal="" data-stagger="0" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);display:flex;flex-wrap:wrap;gap:8px 40px;padding:18px 0;border-bottom:1px solid var(--rule)">
+      <p style="flex:0 0 190px;font:600 12.5px/24px var(--font-body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0">Identity check</p>
+      <p style="flex:1 1 340px;font:400 16px/24px var(--font-body);color:var(--ink2);margin:0;max-width:56ch">An OpenCV + EasyOCR pipeline reads uploaded Aadhaar and PAN cards, extracts fields via regex, and validates them against submitted details — replacing manual admin review.</p>
+    </div>
+    <div data-reveal="" data-stagger="1" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);display:flex;flex-wrap:wrap;gap:8px 40px;padding:18px 0;border-bottom:1px solid var(--rule)">
+      <p style="flex:0 0 190px;font:600 12.5px/24px var(--font-body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0">Invoicing</p>
+      <p style="flex:1 1 340px;font:400 16px/24px var(--font-body);color:var(--ink2);margin:0;max-width:56ch">Labour against spare-part line items (qty × unit price), auto-totalled and emailed.</p>
+    </div>
+    <div data-reveal="" data-stagger="2" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);display:flex;flex-wrap:wrap;gap:8px 40px;padding:18px 0;border-bottom:1px solid var(--rule)">
+      <p style="flex:0 0 190px;font:600 12.5px/24px var(--font-body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0">Recognition</p>
+      <p style="flex:1 1 340px;font:400 16px/24px var(--font-body);color:var(--ink2);margin:0;max-width:56ch">Selected among 500+ projects at Startup Week 2026; considered by LJ University for funding.</p>
+    </div>
+    <div data-reveal="" data-stagger="3" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);display:flex;flex-wrap:wrap;gap:8px 40px;padding:18px 0;border-bottom:2px solid var(--rule)">
+      <p style="flex:0 0 190px;font:600 12.5px/24px var(--font-body);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0">Where it lives</p>
+      <div style="flex:1 1 340px;display:flex;flex-wrap:wrap;gap:10px">
+        <a class="btn btn-primary" href="https://workizo-deploy.vercel.app" target="_blank" rel="noopener" style="text-decoration:none;padding:11px 16px">Live demo — workizo-deploy.vercel.app</a>
+        <a class="btn btn-secondary" href="https://github.com/vivek-ambariya/Workizo-A_service_company" target="_blank" rel="noopener" style="text-decoration:none;padding:11px 16px;color:var(--color-text)">Repository</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="h-work" style="padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))">
+    <p style="font:600 13px/14px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--k);margin:0 0 18px">Selected work</p>
+    <h2 id="h-work" style="font:800 clamp(32px,4.4vw,56px)/1.04 var(--font-heading);letter-spacing:-0.028em;margin:0 0 calc(1.5*var(--lead)) -0.05em;max-width:24ch">Four more systems, and one in progress</h2>
+
+    <article data-reveal="" data-stagger="0" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:2px solid var(--rule);padding:calc(1.2*var(--lead)) 0;display:flex;flex-wrap:wrap;gap:var(--lead) clamp(28px,5vw,64px)">
+      <div style="flex:0 0 170px">
+        <p style="font:700 13px/18px var(--font-heading);color:var(--acc-ink);font-feature-settings:'tnum' 1;margin:0">01</p>
+        <p style="font:600 12.5px/18px var(--font-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:10px 0 0">137 commits</p>
+        <p style="font:400 13px/20px var(--font-body);color:var(--muted);margin:8px 0 0">Flask · MySQL · Razorpay</p>
+      </div>
+      <div style="flex:1 1 380px;min-width:0">
+        <h3 style="font:800 clamp(24px,2.8vw,34px)/1.1 var(--font-heading);letter-spacing:-0.02em;margin:0">BOXY — Multi-Stop Parcel Delivery</h3>
+        <p style="font:400 16.5px/26px var(--font-body);color:var(--ink2);margin:14px 0 0;max-width:58ch">Built around one design decision: most delivery systems assume one booking equals one destination. BOXY doesn't. Several parcels and several stops attach to a single booking — each parcel its own record linked by foreign key, each stop markable as delivered independently. One pickup, one tracking ID, many destinations.</p>
+        <p style="font:400 15px/24px var(--font-body);color:var(--muted);margin:12px 0 0;max-width:58ch">Email OTP auth, partner onboarding, Razorpay and COD.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+          <a class="btn btn-secondary" href="https://github.com/vivek-ambariya/BOXY-parcel_delivery_website" target="_blank" rel="noopener" style="text-decoration:none;padding:10px 14px;color:var(--color-text)">Repository</a>
+        </div>
+      </div>
+    </article>
+
+    <article data-reveal="" data-stagger="1" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:1px solid var(--rule);padding:calc(1.2*var(--lead)) 0;display:flex;flex-wrap:wrap;gap:var(--lead) clamp(28px,5vw,64px)">
+      <div style="flex:0 0 170px">
+        <p style="font:700 13px/18px var(--font-heading);color:var(--acc-ink);font-feature-settings:'tnum' 1;margin:0">02</p>
+        <p style="font:600 12.5px/18px var(--font-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:10px 0 0">In progress</p>
+        <p style="font:400 13px/20px var(--font-body);color:var(--muted);margin:8px 0 0">DRF · ChromaDB · React/Vite</p>
+      </div>
+      <div style="flex:1 1 380px;min-width:0">
+        <h3 style="font:800 clamp(22px,2.4vw,29px)/1.12 var(--font-heading);letter-spacing:-0.02em;margin:0">DevBrain AI — Codebase Intelligence</h3>
+        <p style="font:400 16px/26px var(--font-body);color:var(--ink2);margin:14px 0 0;max-width:58ch">Indexes a whole codebase into vector embeddings and answers questions about it in natural language. Pluggable inference: local Ollama (llama3.2, nomic-embed-text) or hosted API.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+          <a class="btn btn-secondary" href="https://github.com/vivek-ambariya/devbrain-Ai" target="_blank" rel="noopener" style="text-decoration:none;padding:10px 14px;color:var(--color-text)">Repository</a>
+        </div>
+      </div>
+    </article>
+
+    <article data-reveal="" data-stagger="2" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:1px solid var(--rule);padding:calc(1.2*var(--lead)) 0;display:flex;flex-wrap:wrap;gap:var(--lead) clamp(28px,5vw,64px)">
+      <div style="flex:0 0 170px">
+        <p style="font:700 13px/18px var(--font-heading);color:var(--acc-ink);font-feature-settings:'tnum' 1;margin:0">03</p>
+        <p style="font:600 12.5px/18px var(--font-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:10px 0 0">Live on Vercel</p>
+        <p style="font:400 13px/20px var(--font-body);color:var(--muted);margin:8px 0 0">React · Node · Express · MySQL</p>
+      </div>
+      <div style="flex:1 1 380px;min-width:0">
+        <h3 style="font:800 clamp(22px,2.4vw,29px)/1.12 var(--font-heading);letter-spacing:-0.02em;margin:0">AI Cattle Monitoring Dashboard</h3>
+        <p style="font:400 16px/26px var(--font-body);color:var(--ink2);margin:14px 0 0;max-width:58ch">Milk production tracking with volume, quality and temperature; health-risk alerts, trend charts and CSV export.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+          <a class="btn btn-primary" href="https://cattle-monitoring-system-xi.vercel.app" target="_blank" rel="noopener" style="text-decoration:none;padding:10px 14px">Live demo</a>
+          <a class="btn btn-secondary" href="https://github.com/vivek-ambariya/cattle_monitoring_system" target="_blank" rel="noopener" style="text-decoration:none;padding:10px 14px;color:var(--color-text)">Repository</a>
+        </div>
+      </div>
+    </article>
+
+    <article data-reveal="" data-stagger="3" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:1px solid var(--rule);padding:calc(1.2*var(--lead)) 0;display:flex;flex-wrap:wrap;gap:var(--lead) clamp(28px,5vw,64px)">
+      <div style="flex:0 0 170px">
+        <p style="font:700 13px/18px var(--font-heading);color:var(--acc-ink);font-feature-settings:'tnum' 1;margin:0">04</p>
+        <p style="font:400 13px/20px var(--font-body);color:var(--muted);margin:10px 0 0">scikit-learn · Flask</p>
+      </div>
+      <div style="flex:1 1 380px;min-width:0">
+        <h3 style="font:800 clamp(21px,2.2vw,27px)/1.14 var(--font-heading);letter-spacing:-0.018em;margin:0">Cattle Health &amp; Milk-Yield Prediction</h3>
+        <p style="font:400 16px/26px var(--font-body);color:var(--ink2);margin:14px 0 0;max-width:58ch">A Random Forest model served through a Flask API — the prediction layer the dashboard reads from.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+          <a class="btn btn-secondary" href="https://github.com/vivek-ambariya/Cattle_milk_AI-based-solution-hackthon" target="_blank" rel="noopener" style="text-decoration:none;padding:10px 14px;color:var(--color-text)">Repository</a>
+        </div>
+      </div>
+    </article>
+
+    <article data-reveal="" data-stagger="4" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:1px solid var(--rule);border-bottom:2px solid var(--rule);padding:calc(1.2*var(--lead)) 0;display:flex;flex-wrap:wrap;gap:var(--lead) clamp(28px,5vw,64px)">
+      <div style="flex:0 0 170px">
+        <p style="font:700 13px/18px var(--font-heading);color:var(--acc-ink);font-feature-settings:'tnum' 1;margin:0">05</p>
+        <p style="font:400 13px/20px var(--font-body);color:var(--muted);margin:10px 0 0">Java · JDBC · MySQL · JavaMail</p>
+      </div>
+      <div style="flex:1 1 380px;min-width:0">
+        <h3 style="font:800 clamp(21px,2.2vw,27px)/1.14 var(--font-heading);letter-spacing:-0.018em;margin:0">Nomads Café Management System</h3>
+        <p style="font:400 16px/26px var(--font-body);color:var(--ink2);margin:14px 0 0;max-width:58ch">Desktop POS with user authentication, loyalty rewards, Happy Hour discounts and date-filtered sales reports, over custom HashMap, LinkedList and HashSet structures.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+          <a class="btn btn-secondary" href="https://github.com/vivek-ambariya/Nomads-Cafe-Management-system" target="_blank" rel="noopener" style="text-decoration:none;padding:10px 14px;color:var(--color-text)">Repository</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="skills" aria-labelledby="h-skills" style="padding:calc(2*var(--lead)) 0">
+    <p style="font:600 13px/14px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--k);margin:0 0 18px">Skills</p>
+    <h2 id="h-skills" style="font:800 clamp(28px,3.4vw,42px)/1.06 var(--font-heading);letter-spacing:-0.025em;margin:0 0 calc(1.5*var(--lead)) -0.05em">What I reach for</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));gap:var(--lead) clamp(24px,4vw,56px)">
+      <div data-reveal="" data-stagger="0" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:2px solid var(--rule);padding-top:14px">
+        <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px">Languages</p>
+        <p style="font:500 16.5px/28px var(--font-body);margin:0">Python · JavaScript · Java · SQL · HTML &amp; CSS</p>
+      </div>
+      <div data-reveal="" data-stagger="1" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:2px solid var(--rule);padding-top:14px">
+        <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px">Frontend</p>
+        <p style="font:500 16.5px/28px var(--font-body);margin:0">React · Vite · Tailwind CSS · component state · responsive layout</p>
+      </div>
+      <div data-reveal="" data-stagger="2" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:2px solid var(--rule);padding-top:14px">
+        <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px">Backend</p>
+        <p style="font:500 16.5px/28px var(--font-body);margin:0">Django · Django REST Framework · Django Channels · Flask · Node &amp; Express · WebSockets · JWT auth · Razorpay</p>
+      </div>
+      <div data-reveal="" data-stagger="3" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:2px solid var(--rule);padding-top:14px">
+        <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px">ML &amp; AI</p>
+        <p style="font:500 16.5px/28px var(--font-body);margin:0">scikit-learn (Random Forest) · OpenCV · EasyOCR · ChromaDB · vector embeddings · Ollama</p>
+      </div>
+      <div data-reveal="" data-stagger="4" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);border-top:2px solid var(--rule);padding-top:14px">
+        <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px">Data &amp; tooling</p>
+        <p style="font:500 16.5px/28px var(--font-body);margin:0">MySQL · JDBC · Git &amp; GitHub · Vercel · JavaMail</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="background" aria-labelledby="h-bg" style="padding:calc(2*var(--lead)) 0 calc(2.5*var(--lead));border-top:2px solid var(--rule);margin-top:calc(1.5*var(--lead));display:flex;flex-wrap:wrap;gap:var(--lead) clamp(28px,6vw,96px)">
+    <div style="flex:0 0 230px">
+      <p style="font:600 13px/14px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--k);margin:26px 0 12px">Background</p>
+      <h2 id="h-bg" style="font:800 22px/1.2 var(--font-heading);letter-spacing:-0.018em;margin:0">LJIET, Ahmedabad<br>Class of 2028</h2>
+      <p style="font:400 14px/22px var(--font-body);color:var(--muted);margin:12px 0 0">B.E. Computer Engineering, currently semester 5.</p>
+    </div>
+    <div data-reveal="" data-stagger="0" style="opacity:0;transform:translateY(14px);transition:opacity .34s ease-out,transform .34s cubic-bezier(.22,.7,.28,1);flex:1 1 400px;padding-top:26px">
+      <p style="font:500 clamp(18px,2vw,23px)/1.5 var(--font-body);letter-spacing:-0.01em;margin:0;max-width:48ch">I ship iteratively and document. Repos carry a full README with architecture diagrams, because explaining a system forces me to notice where it's weak.</p>
+      <p style="font:400 16.5px/27px var(--font-body);color:var(--ink2);margin:20px 0 0;max-width:52ch">I start from a real constraint and build outward, rather than assembling features off a checklist.</p>
+    </div>
+  </section>
+</main>
+
+<section id="contact" aria-labelledby="h-contact" style="border-top:2px solid var(--rule);background:var(--color-surface)">
+  <div style="max-width:1200px;margin:0 auto;padding:calc(3*var(--lead)) var(--edge)">
+    <p style="font:600 13px/14px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--k);margin:0 0 20px">Contact</p>
+    <h2 id="h-contact" style="font:800 clamp(30px,4.6vw,62px)/1.04 var(--font-heading);letter-spacing:-0.03em;margin:0 0 0 -0.05em;max-width:26ch">I'm looking for a software engineering internship.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:calc(1.5*var(--lead))">
+      <a class="btn btn-primary" href="https://github.com/vivek-ambariya" target="_blank" rel="noopener" style="text-decoration:none;padding:13px 20px;font-size:15px">github.com/vivek-ambariya</a>
+      <a class="btn btn-secondary" href="mailto:vivekambaria@gmail.com" style="text-decoration:none;padding:13px 20px;font-size:15px;color:var(--color-text)">vivekambaria@gmail.com</a>
+      <a class="btn btn-secondary" href="https://linkedin.com/in/vivek-ambariya" target="_blank" rel="noopener" style="text-decoration:none;padding:13px 20px;font-size:15px;color:var(--color-text)">linkedin.com/in/vivek-ambariya</a>
+      <a class="btn btn-secondary" href="tel:+919377631331" style="text-decoration:none;padding:13px 20px;font-size:15px;color:var(--color-text)">+91 93776 31331</a>
+      <a class="btn btn-secondary" href="uploads/CE_Ambariya_vivek_LJIET.pdf" download="Vivek Ambariya — Resume.pdf" style="text-decoration:none;padding:13px 20px;font-size:15px;color:var(--color-text)">Download résumé (PDF) ↓</a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));gap:0 clamp(24px,4vw,56px);margin-top:calc(2*var(--lead));border-top:2px solid var(--rule)">
+      <div style="padding:18px 0;border-bottom:1px solid var(--rule)">
+        <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px">Role sought</p>
+        <p style="font:500 15.5px/24px var(--font-body);margin:0">Full-time software engineering internship in Ahmedabad</p>
+      </div>
+      <div style="padding:18px 0;border-bottom:1px solid var(--rule)">
+        <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px">Availability</p>
+        <p style="font:500 15.5px/24px var(--font-body);margin:0">Immediately, for 6+ months</p>
+      </div>
+      <div style="padding:18px 0;border-bottom:1px solid var(--rule)">
+        <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px">Based in</p>
+        <p style="font:500 15.5px/24px var(--font-body);margin:0">Ahmedabad, India</p>
+      </div>
+      <div style="padding:18px 0;border-bottom:1px solid var(--rule)">
+        <p style="font:600 12.5px/16px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px">Focus</p>
+        <p style="font:500 15.5px/24px var(--font-body);margin:0">Full-stack · Backend · Machine learning</p>
+      </div>
+    </div>
+
+    <p style="font:400 15px/24px var(--font-body);color:var(--muted);margin:calc(1.5*var(--lead)) 0 0;max-width:52ch">Fastest reply by email. Open to remote and on-site.</p>
+  </div>
+</section>
+
+<footer style="border-top:2px solid var(--rule)">
+  <div style="max-width:1200px;margin:0 auto;padding:22px var(--edge);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;font:400 13px/22px var(--font-body);color:var(--muted)">
+    <span style="margin-right:auto">Vivek Ambariya · B.E. Computer Engineering, LJIET · 2028</span>
+    <a href="mailto:vivekambaria@gmail.com" style="color:var(--muted);text-decoration:none" style-hover="color:var(--color-accent)">vivekambaria@gmail.com</a>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;initialTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dark&quot;,&quot;light&quot;,&quot;auto&quot;],&quot;default&quot;:&quot;dark&quot;,&quot;tsType&quot;:&quot;'dark'|'light'|'auto'&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;reveals&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const q = (s) => document.querySelector(s);
+    const qa = (s) => Array.from(document.querySelectorAll(s));
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const motion = (this.props.reveals ?? true) && !reduce;
+
+    // ---- theme: dark by default, auto follows the OS, manual override wins ----
+    const btn = q('#themeBtn');
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    let mode = this.props.initialTheme || 'dark';
+    const apply = () => {
+      const t = mode === 'auto' ? (mq.matches ? 'dark' : 'light') : mode;
+      document.documentElement.setAttribute('data-theme', t);
+      if (btn) btn.textContent = mode === 'auto' ? 'Auto' : (mode === 'dark' ? 'Dark' : 'Light');
+    };
+    apply();
+    mq.addEventListener('change', () => { if (mode === 'auto') apply(); });
+    if (btn) btn.addEventListener('click', () => {
+      mode = mode === 'dark' ? 'light' : mode === 'light' ? 'auto' : 'dark';
+      apply();
+    });
+
+    // ---- reveals: once only, never re-animate ----
+    const targets = qa('[data-reveal]');
+    let pending = [], sweep = null;
+    const show = (el) => { el.style.transitionDelay = ''; el.style.opacity = '1'; el.style.transform = 'none'; };
+    if (!motion) {
+      targets.forEach((el) => { el.style.transition = 'none'; show(el); });
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const i = parseInt(e.target.getAttribute('data-stagger') || '0', 10);
+          e.target.style.transitionDelay = Math.min(i, 6) * 60 + 'ms';
+          show(e.target);
+          io.unobserve(e.target);
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+      targets.forEach((el) => io.observe(el));
+      // scroll-driven fallback: some preview hosts never fire the observer
+      pending = targets.slice();
+      sweep = () => {
+        if (!pending.length) return;
+        const h = window.innerHeight;
+        pending = pending.filter((el) => {
+          const r = el.getBoundingClientRect();
+          if (r.top < h * 0.92 && r.bottom > -h * 0.5) { show(el); io.unobserve(el); return false; }
+          return true;
+        });
+      };
+    }
+
+    // ---- WORKIZO: the booking lifecycle, scrubbed by scroll position ----
+    const pin = q('#wkPin'), stick = q('#wkStick'), fill = q('#wkFill'), cap = q('#wkCaption');
+    const steps = qa('[data-wk-step]'), nodes = qa('[data-wk-node]'), sys = qa('[data-wk]'), lanes = qa('[data-lane]');
+
+    const beats = [
+      {
+        caption: "A customer picks a service and a booking record opens. It is broadcast to the eligible captain pool over Django Channels — nothing polls for it.",
+        sys: ['ws'],
+        lanes: { customer: ['Selects a service, opens the booking', 1], captain: ['Waiting in the verified pool', 0], admin: ['Sees the request land in the queue', 0] }
+      },
+      {
+        caption: "The first captain to accept wins the request, and every portal's status flips in the same instant. Only captains whose Aadhaar or PAN passed the OCR check are in that pool.",
+        sys: ['ws', 'ocr'],
+        lanes: { customer: ['Watching status, no refresh', 0], captain: ['Accepts — first accept wins', 1], admin: ['Assignment written to MySQL', 0] }
+      },
+      {
+        caption: "Accepted, en route, arrived: each transition is pushed, not fetched. The role-based JWT decides which of the three portals is allowed to write it.",
+        sys: ['ws', 'jwt'],
+        lanes: { customer: ['Tracks the captain live', 1], captain: ['En route, status pushed', 1], admin: ['Monitors the active job', 0] }
+      },
+      {
+        caption: "Cash bookings confirm arrival by QR. Work starts, and the captain attaches spare-part line items as they are used.",
+        sys: ['jwt', 'pay'],
+        lanes: { customer: ['Confirms arrival by QR', 1], captain: ['Adds labour and parts', 1], admin: ['Job in progress', 0] }
+      },
+      {
+        caption: "Razorpay with server-side signature verification, or cash. Labour against spare-part line items (qty × unit price), auto-totalled and emailed.",
+        sys: ['pay'],
+        lanes: { customer: ['Pays, receives the invoice', 1], captain: ['Job closed out', 0], admin: ['Reconciles the payment', 1] }
+      }
+    ];
+
+    const setStage = (n, p) => {
+      const b = beats[n];
+      sys.forEach((el) => {
+        const hot = b.sys.indexOf(el.getAttribute('data-wk')) > -1;
+        el.style.opacity = hot ? '1' : '.34';
+        el.style.borderColor = hot ? 'var(--color-accent)' : 'var(--rule)';
+        el.style.background = hot ? 'var(--tint)' : 'transparent';
+      });
+      nodes.forEach((el, i) => {
+        const done = i <= n, hot = i === n;
+        const mark = el.querySelector('[data-marker]');
+        if (mark) mark.style.background = done ? 'var(--color-accent)' : 'var(--rule)';
+        el.querySelectorAll('p').forEach((t, j) => {
+          t.style.color = hot ? (j === 0 ? 'var(--color-text)' : 'var(--ink2)') : 'var(--muted)';
+        });
+        el.style.opacity = done ? '1' : '.6';
+      });
+      steps.forEach((el, i) => {
+        const hot = i === n;
+        el.children[0].style.color = i <= n ? 'var(--acc-ink)' : 'var(--muted)';
+        el.children[1].style.color = hot ? 'var(--color-text)' : 'var(--muted)';
+        el.children[1].style.opacity = hot ? '1' : '.65';
+      });
+      lanes.forEach((el) => {
+        const st = b.lanes[el.getAttribute('data-lane')];
+        const txt = el.querySelector('[data-lane-status]');
+        if (txt && st) txt.textContent = st[0];
+        el.style.opacity = st && st[1] ? '1' : '.45';
+      });
+      if (cap) cap.textContent = b.caption;
+      if (fill) fill.style.width = Math.max(8, p * 100).toFixed(1) + '%';
+    };
+
+    let stage = -1, narrow = null;
+    const measure = () => {
+      const isNarrow = window.innerWidth < 760 || !motion;
+      if (isNarrow === narrow) return isNarrow;
+      narrow = isNarrow;
+      if (isNarrow) {
+        // pinned beats degrade to stacked flow: everything on, nothing hidden
+        if (introPin && introSec) {
+          introPin.style.height = 'auto';
+          introSec.style.position = 'static';
+          introSec.style.height = 'auto';
+          introSec.style.minHeight = '100vh';
+        }
+        if (word) word.textContent = words[0];
+        pin.style.height = 'auto';
+        stick.style.position = 'static';
+        sys.forEach((el) => { el.style.opacity = '1'; el.style.borderColor = 'var(--rule)'; el.style.background = 'transparent'; });
+        nodes.forEach((el) => {
+          el.style.opacity = '1';
+          const m = el.querySelector('[data-marker]');
+          if (m) m.style.background = 'var(--color-accent)';
+        });
+        steps.forEach((el) => { el.children[0].style.color = 'var(--acc-ink)'; el.children[1].style.opacity = '1'; });
+        lanes.forEach((el) => { el.style.opacity = '1'; });
+        if (fill) fill.style.width = '100%';
+        if (cap) cap.textContent = beats[0].caption;
+      } else {
+        if (introPin && introSec) {
+          introPin.style.height = '300vh';
+          introSec.style.position = 'sticky';
+          introSec.style.height = '100vh';
+          introSec.style.minHeight = '';
+        }
+        pin.style.height = '360vh';
+        stick.style.position = 'sticky';
+        stage = -1;
+      }
+      return isNarrow;
+    };
+
+    // ---- header: transparent over the photo hero, solid once past it ----
+    const head = q('#head'), navLinks = qa('[data-navlink]'), navPills = qa('[data-navpill]'), brandLink = q('[data-navbrand]'), tbtn = q('#themeBtn');
+    let solid = null;
+    const setNav = (s) => {
+      if (s === solid || !head) return;
+      solid = s;
+      head.style.background = s ? 'var(--color-bg)' : 'transparent';
+      head.style.borderBottomColor = s ? 'var(--rule)' : 'transparent';
+      if (brandLink) brandLink.style.color = s ? 'var(--color-text)' : '#fcf2e5';
+      navLinks.forEach((a) => { a.style.color = s ? 'var(--ink2)' : 'rgba(252,242,229,.86)'; });
+      navPills.forEach((p) => { p.style.borderColor = s ? 'var(--rule)' : 'rgba(252,242,229,.4)'; });
+      if (tbtn) tbtn.style.color = s ? 'var(--color-text)' : '#fcf2e5';
+    };
+
+    // ---- intro cover: the display word advances with scroll ----
+    const introPin = q('#introPin'), introSec = q('#intro'), word = q('#introWord');
+    const words = ['systems', 'code', 'git'];
+    let wordIdx = -1;
+    const setWord = (i) => {
+      if (i === wordIdx || !word) return;
+      wordIdx = i;
+      word.style.opacity = '0';
+      setTimeout(() => { word.textContent = words[i]; word.style.opacity = '1'; }, 150);
+    };
+
+    // ---- cover video: first two seconds only, at half speed ----
+    const vid = q('#introVid');
+    if (vid) {
+      if (!motion) {
+        vid.style.display = 'none';
+      } else {
+        // native playback at 0.2x over the first second; the restart is hidden by a short fade
+        // first second at 0.2x, then hold the last frame and seek back silently — no fade, no flash
+        vid.muted = true;
+        vid.loop = false;
+        vid.style.opacity = '1';
+        const CAP = 0.9, HOLD = 2600;
+        let cycling = false, onScreen = true;
+        const rate = () => { vid.playbackRate = 0.2; };
+        rate();
+        vid.addEventListener('loadedmetadata', rate);
+        vid.addEventListener('timeupdate', () => {
+          if (cycling || vid.currentTime < CAP) return;
+          cycling = true;
+          vid.pause();
+          setTimeout(() => {
+            try { vid.currentTime = 0; } catch (e) { /* not seekable */ }
+            rate();
+            cycling = false;
+            if (onScreen && !document.hidden) vid.play().catch(() => {});
+          }, HOLD);
+        });
+        const resume = () => {
+          if (cycling) return;
+          if (onScreen && !document.hidden) vid.play().catch(() => {}); else vid.pause();
+        };
+        if (introSec && 'IntersectionObserver' in window) {
+          new IntersectionObserver((e) => { onScreen = e[0].isIntersecting; resume(); }, { threshold: 0.05 }).observe(introSec);
+        }
+        document.addEventListener('visibilitychange', resume);
+        resume();
+      }
+    }
+
+    const bar = q('#prog');
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - window.innerHeight;
+        if (bar) bar.style.width = (max > 0 ? Math.min(1, window.scrollY / max) * 100 : 0) + '%';
+        if (sweep) sweep();
+        setNav(window.scrollY > introPin.offsetHeight + window.innerHeight * 0.72);
+        if (!narrow && introPin) {
+          const ir = introPin.getBoundingClientRect();
+          const ispan = introPin.offsetHeight - window.innerHeight;
+          const ip = Math.max(0, Math.min(0.999, -ir.top / (ispan || 1)));
+          setWord(Math.floor(ip * words.length));
+        }
+        if (narrow) return;
+        const r = pin.getBoundingClientRect();
+        const span = pin.offsetHeight - window.innerHeight;
+        const p = Math.max(0, Math.min(1, -r.top / (span || 1)));
+        const n = Math.min(4, Math.floor(p * 5.0001));
+        if (n !== stage) { stage = n; setStage(n, p); }
+        else if (fill) { fill.style.width = Math.max(8, p * 100).toFixed(1) + '%'; }
+      });
+    };
+
+    measure();
+    if (!narrow) setStage(0, 0);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', () => { measure(); onScroll(); });
+  }
+}
+
+</script>
+</body>
+</html>

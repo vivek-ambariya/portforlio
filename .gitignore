@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+._*
+
+# editor
+.vscode/
+.idea/
+
+# Superdesign canvas working files
+*.dc.html.orig
+*.orig
+.thumbnail
+.agents/
+
+# local scratch
+node_modules/
+*.log
