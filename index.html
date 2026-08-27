@@ -29,6 +29,101 @@
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;text-wrap:pretty;background:var(--color-bg);color:var(--color-text);-webkit-font-smoothing:antialiased}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   RESPONSIVE — phone and tablet.
+   This page lays out almost entirely in inline style="" attributes, which
+   outrank any stylesheet rule, so every override below needs !important.
+   Breakpoints: 900px (tablet) and 600px (phone).
+   ───────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  :root { --lead: 22px; }
+
+  /* NAV — the row wrapped onto three lines, so this fixed header stood 241px
+     tall and buried the top of every section behind it. Hold it to one row and
+     let the section links scroll sideways rather than wrap. */
+  #head nav { flex-wrap: nowrap !important; gap: 10px !important; padding: 9px var(--edge) !important; }
+  #head a[data-navbrand] { width: 42px !important; height: 42px !important; font-size: 11px !important; }
+  #head div[data-navpill] {
+    flex: 1 1 auto !important; min-width: 0 !important;
+    flex-wrap: nowrap !important; overflow-x: auto !important;
+    padding: 3px 6px !important; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; -ms-overflow-style: none;
+  }
+  #head div[data-navpill]::-webkit-scrollbar { display: none; }
+  #head [data-navlink] {
+    font-size: 12.5px !important; padding: 8px 11px !important;
+    min-height: 44px !important; display: inline-flex !important; align-items: center !important;
+  }
+  #head a[data-navpill]:not([data-navbrand]) { padding: 8px 15px !important; }
+
+  /* anchor jumps must clear the (now short) fixed header */
+  html { scroll-padding-top: 74px !important; }
+
+  /* INTRO WORD — carried a baked-in width:976px / height:130px / font-size:120px
+     that overrode its own clamp(), pushing it off both edges of the screen. */
+  #intro p:has(#introWord) {
+    width: 100% !important; height: auto !important;
+    font-size: clamp(58px, 17vw, 120px) !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  /* INTRO CONTENT — the wrapper's height:100% stopped resolving once stacked,
+     collapsing it to its own content height, so justify-content:flex-end had
+     nothing to push against and the title rode up under the nav. Make the
+     section a flex column and let the wrapper claim the leftover height. */
+  #intro { display: flex !important; flex-direction: column !important; }
+  #intro > div:has(#introWord) { flex: 1 1 auto !important; height: auto !important; }
+
+  /* BOOKING LIFECYCLE — five hard columns squeezed to ~63px each and the
+     labels collided. Scroll the strip instead of crushing it. */
+  div:has(> [data-wk-node]) {
+    grid-template-columns: none !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: minmax(130px, 1fr) !important;
+    overflow-x: auto !important; padding-bottom: 8px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* WORKIZO — the right column carries flex-basis:420px, so at tablet width it
+     still sat beside the step list and squeezed the lifecycle strip to 431px.
+     Stack the two columns so the strip gets the full measure. */
+  #wkStick div:has(> div > div > div > [data-wk-node]) > * { flex: 1 1 100% !important; min-width: 0 !important; }
+
+  /* HERO — allow the portrait column to fall below the copy, and drop the
+     vertical rule that otherwise floats mid-screen with nothing beside it. */
+  #hero { flex-wrap: wrap !important; }
+  #hero div[style*="border-right"] { border-right: 0 !important; padding-right: 0 !important; }
+
+  /* comfortable touch targets throughout */
+  .btn { min-height: 44px !important; }
+}
+
+@media (max-width: 600px) {
+  :root { --lead: 20px; }
+
+  /* the pinned panels are taller than a phone screen once stacked — let them
+     size to their content rather than clipping it to 100vh */
+  #wkStick { height: auto !important; min-height: 100svh !important; }
+
+  /* keep the tallest headings from crowding the viewport edges */
+  #hero h2, #h-name { font-size: clamp(40px, 12vw, 64px) !important; }
+  #h-wk { font-size: clamp(34px, 10vw, 48px) !important; }
+
+  /* contact + footer links are read and tapped, so give them real height */
+  #contact a, footer a, a[href^="mailto:"] {
+    min-height: 44px !important; display: inline-flex !important; align-items: center !important;
+  }
+  a[href="#hero"]:first-of-type { min-height: 44px !important; }
+}
+
+/* very narrow phones (iPhone SE and similar) */
+@media (max-width: 380px) {
+  #head [data-navlink] { font-size: 12px !important; padding: 8px 9px !important; }
+  #head a[data-navbrand] { width: 38px !important; height: 38px !important; }
+}
+
 </style>
 </helmet>
 
