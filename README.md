@@ -3,7 +3,11 @@
 A single-page, scroll-driven portfolio. Static HTML, CSS and vanilla JavaScript —
 no build step, no framework, no dependencies to install.
 
-**Live:** _enable GitHub Pages on this repo to publish it_
+### → **[vivek-intro.vercel.app](https://vivek-intro.vercel.app/)**
+
+Deployed on Vercel as a static site. There is no build command and no output
+directory to configure — Vercel serves the repository root as-is, so pushing to
+`main` is the whole deploy step.
 
 ---
 
@@ -57,11 +61,33 @@ visual weight.
 Both themes were checked against WCAG AA across every text node on the page:
 **no failures in either theme.**
 
+## Responsive layout
+
+Breakpoints live at the end of the `<style>` block in `index.html`, at
+**900px**, **600px** and **380px**.
+
+They carry `!important` throughout, which is deliberate rather than careless:
+the page lays out almost entirely in inline `style=""` attributes, and those
+outrank any stylesheet rule, so a plain declaration would never apply.
+
+What changes below 900px:
+
+| | Desktop | Phone / tablet |
+| --- | --- | --- |
+| Header | 86px, links in one pill | 72px; the pill scrolls sideways instead of wrapping |
+| Intro word | fixed 120px | `clamp(58px, 17vw, 120px)`, width freed from its baked-in 976px |
+| Booking lifecycle | five equal columns | scrolls on phones; full width on tablet |
+| WORKIZO panel | two columns | stacked, so the lifecycle strip gets the whole measure |
+
+Checked at 390px, 820px and 1440px: no horizontal scroll, no tap target under
+44px, and no contrast regression at any width.
+
 ## Accessibility
 
 - Light and dark themes, following `prefers-color-scheme` with a manual toggle
 - Motion honours `prefers-reduced-motion`
 - Skip-to-content link, semantic landmarks, visible focus states
+- Touch targets meet the 44px minimum
 
 ---
 
